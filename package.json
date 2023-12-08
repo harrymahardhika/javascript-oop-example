@@ -9,5 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@faker-js/faker": "^8.3.1",
+    "cli-table3": "^0.6.3"
+  }
 }
