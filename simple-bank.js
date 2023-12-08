@@ -6,9 +6,9 @@ const bca = new Bank('BCA')
 const mandiri = new Bank('Mandiri')
 
 // create new accounts
-const johnsAccount = new BankAccount('John Doe')
-const janesAccount = new BankAccount('Jane Doe')
-const jacksAccount = new BankAccount('Jack Doe')
+const johnsAccount = new BankAccount('John Doe', 'male')
+const janesAccount = new BankAccount('Jane Doe', 'female')
+const jacksAccount = new BankAccount('Jack Doe', 'male')
 
 // add accounts to the bank
 bca.addAccount(johnsAccount)

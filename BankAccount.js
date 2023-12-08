@@ -1,14 +1,15 @@
 import { faker } from '@faker-js/faker'
 import Transaction from './Transaction.js'
-import { formatter } from './helper.js'
+import { formatName, formatCurrency } from './helper.js'
 
 export default class BankAccount {
   balance = 0
   transactions = []
 
-  constructor(owner) {
+  constructor(owner, gender) {
     this.number = faker.finance.accountNumber()
     this.owner = owner
+    this.gender = gender
   }
 
   deposit(amount) {
@@ -26,12 +27,13 @@ export default class BankAccount {
   }
 
   toString() {
-    const balance = formatter(this.balance)
-    return `A/N (${this.number}) - ${this.owner}: ${balance}`
+    const balance = formatCurrency(this.balance)
+    const owner = formatName(this.owner, this.gender)
+    return `A/N (${this.number}) - ${owner}: ${balance}`
   }
 
   getBalance() {
-    return formatter(this.balance)
+    return formatCurrency(this.balance)
   }
 
   getTransactions() {
