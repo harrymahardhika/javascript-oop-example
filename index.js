@@ -1,5 +1,12 @@
+/**
+ * This file demonstrates the usage of classes and modules in JavaScript.
+ * It imports classes from 'Animal.js' and 'Person.js' modules and creates instances of those classes.
+ * It also demonstrates the usage of a simple bank module called 'simple-bank.js'.
+ */
+import { Bird, Cat, Dog, Tiger } from './Animal.js'
 import { Person } from './Person.js'
-import { Bird, Dog, Cat, Tiger } from './Animal.js'
+import simpleBank from './simple-bank.js'
+
 const john = new Person('John', 25)
 john.greet()
 
@@ -20,3 +27,6 @@ macaaaan.speak()
 
 console.log(tweety)
 console.log(Object.keys(tweety).length > 0)
+
+// run bank example
+simpleBank()
